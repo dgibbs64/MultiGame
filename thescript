@@ -9,13 +9,14 @@
 #If the file is in the home directory of the user, you need to use $HOME not ~/
 
 servers=("$HOME/s1" "$HOME/s2")
+scriptname="csgoserver"
 
 #The GameServerManagers script
 #If you are running a different game server just change it to that game server scripts start command i.e ./arkserver 
-START="./csgoserver start"
-STOP="./csgoserver stop"
-UPDATE="./csgoserver update"
-RESTART="./csgoserver restart"
+START="./${scriptname} start"
+STOP="./${scriptname} stop"
+UPDATE="./${scriptname} update"
+RESTART="./${scriptname} restart"
 case "$1" in
     start)
     CMD=$START
